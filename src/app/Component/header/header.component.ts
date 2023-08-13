@@ -11,4 +11,9 @@ export class HeaderComponent {
   menu_icon_visible() {
     this.hamberger_menu = !this.hamberger_menu;
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+ 
 }

@@ -10,13 +10,13 @@
             <a class="navbar-brand" routerLink="#index.html">
                 <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
             </a> -->
-            <button (click)="menu_icon_visible()" class="navbar-toggler collapsed bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button (click)="menu_icon_visible()" class="navbar-toggler collapsed bg-gradient" type="button">
                 <i class="bi bi-list" *ngIf="hamberger_menu"></i>
                 <i class="bi bi-x" *ngIf="!hamberger_menu"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul (click)="menu_icon_visible()" class="navbar-nav ms-lg-auto" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02">
+            <div [ngClass]="{'collapse': hamberger_menu, 'navbar-collapse': true}" id="navbarTogglerDemo02">
+                <ul (click)="menu_icon_visible();scrollToTop();" class="navbar-nav ms-lg-auto">
                     <li class="nav-item active">
                         <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a>
                     </li>
