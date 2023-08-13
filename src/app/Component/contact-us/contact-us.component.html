@@ -1,0 +1,114 @@
+<section class="about-breadcrumb text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-5 py-md-4">
+            <div class="banner-info-grid px-md-5">
+                <h2 class="title-breadcrumb mb-3">Contact Us</h2>
+                <p class="inner-page-para px-lg-5">Feel free to learn more about our team and company on this page. We
+                    are always happy to help you!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ....... -->
+<section class="contacts">
+    <div class="contact-top pt-5">
+        <div class="container py-lg-4">
+            <div class="d-grid cont-main-top mt-lg-5 mt-4">
+                <!-- contact form -->
+                <div class="contacts12-main">
+                    <div *ngIf="showSuccessMessage" class="success-message">
+                        Contact form submitted successfully!
+                    </div>
+                    <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit()" class="main-input">
+                        <div class="top-inputs d-grid">
+                            <input type="text" placeholder="Name" formControlName="name" required>
+                            <div class="error-msg"
+                                *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)">
+                                <div *ngIf="contactForm.get('name')?.hasError('required')">Name is required.</div>
+                            </div>
+                            <input type="email" placeholder="Email" formControlName="email" required>
+                            <div class="error-msg"
+                                *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)">
+                                <div *ngIf="contactForm.get('email')?.hasError('required')">Email is required.</div>
+                                <div *ngIf="contactForm.get('email')?.hasError('email')">Please enter a valid email
+                                    address.</div>
+                                <div *ngIf="contactForm.get('email')?.hasError('pattern')">Please enter a valid email
+                                    address (e.g., user@example.com).</div>
+                            </div>
+                        </div>
+                        <input type="tel" placeholder="Phone Number" formControlName="phoneNumber" required>
+                        <div class="error-msg"
+                            *ngIf="contactForm.get('phoneNumber')?.invalid && (contactForm.get('phoneNumber')?.dirty || contactForm.get('phoneNumber')?.touched)">
+                            <div *ngIf="contactForm.get('phoneNumber')?.hasError('required')">Phone number is required.
+                            </div>
+                            <div *ngIf="contactForm.get('phoneNumber')?.hasError('pattern')">Please enter a valid phone
+                                number (numbers only).</div>
+                            <div *ngIf="contactForm.get('phoneNumber')?.hasError('minlength')">Phone number must be at
+                                least 10 characters long.</div>
+                            <div *ngIf="contactForm.get('phoneNumber')?.hasError('maxlength')">Phone number cannot
+                                exceed 15 characters.</div>
+                        </div>
+                        <textarea placeholder="Message" formControlName="message"></textarea>
+                        <div class="text-end">
+                            <button type="submit" [disabled]="contactForm.invalid"
+                                class="btn btn-primary btn-style">Submit Now</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- //contact form -->
+                <!-- contact address -->
+                <div class="contact">
+                    <div class="cont-subs">
+                        <div class="cont-add">
+                            <h4>Company Location:</h4>
+                            <p class="contact-text-sub">Kherwadi Rd, Naupada Village, Bandra East, Mumbai, Maharashtra
+                                400051</p>
+                        </div>
+                        <div class="cont-add">
+                            <h4>Email Address:</h4>
+                            <a href="mailto:msk.asia26@gmail.com">
+                                <p class="contact-text-sub">msk.asia26@gmail.com</p>
+                            </a>
+                        </div>
+                        <div class="cont-add">
+                            <h4>Phone Number:</h4>
+                            <a href="tel:+(91) 7738942016">
+                                <p class="contact-text-sub">+(91) 7738942016</p>
+                            </a>
+                        </div>
+                        <div class="social-icons-con">
+                            <h4 class="mb-3">Connect with us:</h4>
+                            <a href="">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/+918108993961" target="_blank">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <!-- <a href="">
+                                <i class="bi bi-youtube"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //contact address -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ........ -->
+<!-- map -->
+<div class="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.0741547927514!2d72.84053827507599!3d19.060476982140894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c989f49727f5%3A0xdd0974480b20f041!2sMSK%20Asia%20IT%20Solutions!5e0!3m2!1sen!2sin!4v1689680128095!5m2!1sen!2sin"
+        width="100%" height="450" style="border: 2px dashed #000080;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- //map -->

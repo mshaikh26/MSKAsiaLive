@@ -1,0 +1,92 @@
+@import "./../../../variable.scss";
+@import "./../../../responsive.scss";
+
+// ------
+
+.footer {
+    // background-color: #26243c;
+    background-color: rgba(0, 0, 128, 1);
+
+    .footer-list {
+
+        p, a {
+            font-size: 16px;
+            color: $white-color;
+            padding-bottom: 4px;
+            text-decoration: none;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            margin-bottom: 10px
+        }
+        a {
+            transition: 0.3s;
+            
+            &:hover {
+                color: #dbdbdb
+            }
+        }
+        .social_media {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+
+                a {
+
+                    i {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 24px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    input[type="email"] {
+        background: #fff;
+        border: none;
+        padding: 16px 20px;
+        font-size: 15px;
+        outline: none;
+        width: 80%;
+        color: #404044;
+        border-radius: 4px 0 0 4px;
+    }
+
+    .emailButton {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 16px 12px;
+        cursor: pointer;
+        width: 20%;
+        color: #fff;
+        background: #7c7cff;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .copy-footer {
+        font-size: 16px;
+        color: #ababab;
+        border-top: 1px solid $white-color;
+        padding-top: 35px;
+
+        span {
+            color: #fff;
+        }
+    }
+}

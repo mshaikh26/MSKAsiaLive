@@ -1,0 +1,236 @@
+@import "./../../../variable.scss";
+// @import "./../../../responsive.scss";
+
+// ------
+
+// Banner
+.banner {
+    background: url(./../../../assets/image/banner1.jpg) no-repeat center;
+    -ms-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    display: grid;
+    align-items: center;
+    
+    h3 {
+        color: #fff;
+        font-size: 100px;
+        line-height: 100px;
+        font-weight: 700;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    
+        sup {
+            font-size: 17px;
+        }
+    }
+
+    p {
+        color: #fff;
+    }
+}
+
+.banner:before {
+    content: "";
+    background: rgba(103, 58, 183, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.banner-info-grid {
+    max-width: 750px;
+    margin: auto;
+}
+
+
+// About
+.about-section {
+    background-color: #f9f9f9;
+}
+
+.about-info {
+    align-self: center;
+}
+
+.title-heading {
+    max-width: 700px;
+}
+
+.about-single {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 128, 0.31);
+    border-bottom: 3px solid $primary-color;
+
+    .about-icon {
+        i {
+            font-size: 40px;
+            color: $primary-color;
+        }
+    } 
+}
+
+.about-content h5 a {
+    font-weight: 600;
+    color: #404044;
+    font-size: 22px;
+}
+
+.whychooseus .grids_info {
+    h4 {
+        font-size: 22px;
+        line-height: 34px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #404044;
+    }
+    i {
+        font-size: 28px;
+        color: $primary-color;
+        // margin-top: 8px;
+    }
+}
+
+// Testimonials ------
+.clients {
+    
+
+    blockquote {
+        margin: 0 0 1rem;
+
+        q {
+            font-size: 20px;
+            font-weight: 500;
+            color: #707070;
+            line-height: 34px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+    .testi-des {
+        display: flex;
+        /* justify-content: center; */
+        padding-top: 20px;
+        align-items: center;
+    }
+    .testimonial .peopl h3 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 22px;
+        color: #404044;
+    }
+    p.indentity {
+        font-size: 18px;
+        text-align: left;
+        margin-top: 5px;
+    }
+}
+
+// blogs css
+.blog .card {
+    border: none;
+    background: none;
+    box-shadow: 0 20px 40px 0 rgba(50, 65, 141, 0.12);
+    box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
+}
+
+.blog .card img {
+    transition: 0.3s ease-in-out;
+}
+
+.blog .card:hover img {
+    transform: scale(1.1);
+}
+
+.blog .card-header {
+    border: none;
+    overflow: hidden;
+}
+
+.card-header:first-child {
+    border-radius: 5px;
+}
+
+.blog .card-body {
+    padding: 1.5rem;
+    background: #fff;
+    border-bottom: 3px solid $primary-color;
+}
+
+.date {
+    position: absolute;
+    background: #00c16e;
+    right: 0;
+    bottom: 0;
+
+    p {
+        font-size: 13px;
+        color: #fff;
+        padding: 5px 15px;
+        font-weight: 600;
+    }
+}
+
+.blog {
+    background-color: #f9f9f9;
+}
+
+.blog .price-review p {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.blog a.blog-desc {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-top: 10px;
+}
+
+// Call to contact
+
+.call-to-action {
+    background-color: #7c7cff;
+}
+
+span.text-italic {
+    font-style: italic;
+    font-size: 30px;
+    font-family: initial;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+}
+
+.call-to-action .buttons li {
+    list-style: none;
+    display: inline-block;
+}
+
+.buttons li.phone-sec a.call-style {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+// --------Swiper
+
+::ng-deep {
+    .swiper {
+        margin-top: 90px;
+    }
+    .swiper-slide {
+        height: 91vh;
+        overflow: hidden;
+
+        img {
+            border-radius: 0;
+        }
+    }
+}

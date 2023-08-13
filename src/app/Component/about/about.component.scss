@@ -1,0 +1,176 @@
+@import "./../../../variable.scss";
+@import "./../../../responsive.scss";
+
+// ------
+
+.breadcrumb-bg-about {
+    background: url(./../../../assets/image/banner1.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    margin-top: 90px;
+}
+.breadcrumb-bg-about:before {
+    content: "";
+    background: rgba(0, 0, 128, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.banner-info-grid {
+    max-width: 750px;
+    margin: auto;
+}
+.title-breadcrumb {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $white-color;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+}
+p.inner-page-para {
+    color: $white-color;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0.7;
+}
+.content-6 .progress-info {
+    margin-bottom: 30px;
+    text-align: left;
+}
+.content-6 .info1 h6.progress-tittle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.content-6 h6.progress-tittle {
+    font-size: 18px;
+    color: #707070;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.content-6 .progress-bar {
+    background-color: $primary-color;
+    transition: width 0.6s ease;
+}
+.content-6 .progress {
+    display: flex;
+    height: 0.5em;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #f9f9f9;
+    border-radius: 0.25rem;
+}
+
+// section 2
+.cwp {
+    background-color: #f9f9f9;
+
+    .cwp23-text-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 50px;
+        grid-column-gap: 40px;
+        
+        h4 {
+            margin-bottom: 12px;
+            font-size: 22px;
+            line-height: 28px;
+            color: #404040;
+            font-weight: 600;
+            transition: 0.3s ease-in;
+        }
+    }
+    .column span {
+        color: $primary-color;
+        font-size: 35px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+}
+
+// section 3
+.img-area {
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+    
+    img {
+        border-radius: 6px;
+        transition: all 0.4s ease 0s;
+    }
+
+    .social {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: .5s;
+        transform: rotateY(180deg) scale(0.5, 0.5);
+
+        ul {
+            text-align: center;
+            position: relative;
+            top: 49%;
+
+            li {
+                display: inline-block;
+                margin: 0 4px;
+
+                a {
+                    border: 2px solid $white-color;
+                    color: $white-color;
+                    display: block;
+                    font-size: 16px;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 38px;
+                    text-align: center;
+                    border-radius: 6px;
+
+                    &:hover {
+                        background-color: $white-color;
+                        color: $primary-color;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+    
+    &:hover {
+
+        img {
+            transform: scale(1.2);
+        }
+
+        .social {
+            cursor: pointer;
+            opacity: 1;
+            transform: rotateY(0deg) scale(1, 1);
+        }
+    }
+}
+.img-text {
+    padding: 25px;
+    padding-bottom: 0;
+    color: $white-color;
+    text-align: center;
+
+    h4 {
+        margin: 0 0 5px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+// section 4

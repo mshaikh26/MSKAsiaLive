@@ -1,0 +1,131 @@
+@import "./../../../variable.scss";
+@import "./../../../responsive.scss";
+
+// ------
+
+header {
+    position: fixed !important;
+    padding: 0px;
+    transition: all 0.4s ease 0s;
+    height: 90px;
+    // height: auto;
+    display: grid;
+    align-items: center;
+    background-color: rgb(0, 0, 128, 100%);
+    border-bottom: 2px solid #fff;
+    
+    .navbar .navbar-brand, a.logo {
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+        color: $white-color;
+        font-weight: 600;
+        position: relative;
+
+        img {
+            // background-color: $white-color;
+            padding: 2px;
+            // border-radius: 50%;
+            // width: 65px;
+        }
+        
+    }
+    .nav-item {
+        position: relative;
+
+        a {
+            color: $white-color;
+        }
+    }
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-nav {
+    background-color: #000080;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+        li {
+            margin: 0 2px;
+            transition: all 0.5s ease;
+            position: relative;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                padding: 4px 15px;
+                font-size: 16px;
+                font-weight: 500;
+                // text-transform: uppercase;
+                color: #fff;
+                transition: 0.3s;
+                position: relative;
+                background-color: $primary-color;
+                // border-bottom: 3px solid transparent;
+                border-radius: 15px;
+                
+                &:hover {
+                    color: $primary-color;
+                    background-color: #ffffff;
+
+                    // &:after {
+                    //     width: 100%;
+                    //     transform-origin: center;
+                    // }
+                }
+            }
+            .active {
+                // color: $white-color!important;
+                // background-color: $primary-color;
+                color: $primary-color !important;
+                background-color: $white-bg;
+            }
+
+            // &:after {
+            //     content: "";
+            //     background: $primary-color;
+            //     // width: 100%;
+            //     width: 0;
+            //     height: 3px;
+            //     display: block;
+            //     transition: 0.3s;
+            //     position: absolute;
+            //     left: 0;
+            //     right: 0;
+            //     margin: 0px auto;
+            //     bottom: 0px;
+            // }
+            
+            // &:hover {
+            //     &:after {
+            //         width: 100%;
+            //         transform-origin: center;
+            //     }
+            // }
+        }
+}
+.navbar-toggler {
+    background: $white-bg;
+    color: $primary-color;
+    font-size: 30px;
+    padding: 4px 7px 1px;
+}
+// .active {
+//     // color: $white-color!important;
+//     // background-color: $primary-color;
+//     color: $primary-color !important;
+//     background-color: $white-bg;
+// }
